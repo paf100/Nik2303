@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NIK 2303 address counter</title>
+  </head>
+  <body>
+  <h3><strong>Расчет сетевого адреса</strong></h3>электросчетчика <strong>NIK2303</strong> по его серийному номеру<br><br>
+  <input width=50px></input><button type="number">Расчитать</button><br><br>
+  <h4><p></p></h4>
+
+<script>
+var buttCount = document.getElementsByTagName("button")[0];
+var rezult = document.getElementsByTagName('p')[0];
+buttCount.addEventListener("click", function (event) { 
+var aDDr=document.getElementsByTagName("input")[0].value;
+if (aDDr) {
+x= +aDDr;
+var bin = '';
+    do { bin = (x & 1).toString() + bin; } while ((x >>= 1) > 0);
+bin = bin.toString();
+var buf = "00";
+buf = buf + bin.substring(bin.length-14, bin.length);
+buf = parseInt(buf, 2);
+rezult.innerHTML = "Результат: " + buf;
+}
+});
+</script>
+
+</body>
+</html>
