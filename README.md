@@ -1,0 +1,1 @@
+Funny software for my friend. 15 min coding without any serious vizualization. It can help you to count network address of ukrainian electricity meter NIK2303 by his serial number (factory algorithm).  http://paf.at.ua/nik2303.html
